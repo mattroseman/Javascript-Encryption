@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>encryption testing</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script type="text/javascript" src="jquery-1.12.2.min.js"></script>
+    </head>
+    <body>
+        <form>
+            <div class="dropdown">
+                <button onclick="showProtocols()" class="dropbutton">Encryption Protocols</button>
+                <div id="protocolDropdown" class="dropdown-content">
+                    <a href="#">SHA-256 Hash</a>
+                    <a href="#">PGP Encryption</a>
+                </div>
+                <script type="text/javascript">
+                function showProtocols() {
+                    $("#myDropdown").classList.toggle("show");
+                }
+
+                window.onclick = function(event) {
+                    if (!event.target.matches('.dropbutton')) {
+                        var dropdowns = $(".dropdown-content");
+                        var i;
+                        for (i=0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+                </script>
+            </div>
+            <div>
+                <label for="plaintext-msg">Plaintext Message</label>
+                <textarea id="plaintext-msg"></textarea>
+            </div>
+            <div class="button">
+                <button type="submit" id="encrypt-button">Encrypt</button>
+            </div>
+        </form>
+    </body>
+</html>
