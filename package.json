@@ -1,0 +1,17 @@
+{
+  "name": "encryption",
+  "version": "0.0.1",
+  "description": "Basic implementation of openpgpjs",
+  "main": "encrypt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "openpgp"
+  ],
+  "author": "Matthew Roseman",
+  "license": "ISC",
+  "dependencies": {
+    "openpgp": "^2.2.1"
+  }
+}
